@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+/* font-family: 'Acme', sans-serif; */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Acme", sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.8;
+  font-weight: normal;
+}
+::selection {
+  background-color: #d2fa0c;
+  color: #021a40;
+}
+button {
+  background-color: rgb(250, 92, 0);
+  color: white;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all linear 0.3s;
+  cursor: pointer;
+  font-family: acme;
+  border: none;
+}
+button:hover {
+  background-color: green;
+  transition: all linear 0.3s;
+}
+input[type="submit"] {
+  background-color: rgb(250, 92, 0);
+  color: white;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all linear 0.3s;
+  cursor: pointer;
+  font-family: acme;
+}
+input {
+  color: green;
+  background-color: rgb(158, 248, 158);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all linear 0.3s;
+  font-family: acme;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+input:disabled {
+  background-color: rgb(116, 107, 107);
+}
+input[type="submit"]:hover {
+  background-color: green;
+  transition: all linear 0.3s;
+  border: none;
+}
+option {
+  padding: 5px;
+}
+select-item {
+  padding: 10px;
+}
+#board {
+  width: 90%;
+  background-color: #021a40;
+  color: #d2fa0c;
+  margin: 50px auto;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: #d2fa0c;
+  transition: all linear 0.3s;
+  font-size: 25px;
+}
+a:hover {
+  color: red;
+  transition: all linear 0.3s;
+}
+.class {
+  border-bottom: 5px solid #d2fa0c;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.class p {
+  color: #d2fa0c;
+  font-weight: normal;
+  font-size: 25px;
+  padding: 30px 20px 7px 50px;
+  text-align: center;
+}
+
+.class::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 15px;
+  background-color: #d2fa0c;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotate(180deg);
+  position: absolute;
+  left: 50%;
+  top: 112px;
+}
+
+.code {
+  padding: 0 20px;
+  color: #fff;
+}
+
+.js {
+  padding: 20px;
+}
+
+.guessboard {
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 3px dashed #d2fa0c;
+  text-align: center;
+}
+
+.game-area h2 {
+  color: rgb(210, 250, 12);
+  font-weight: normal;
+  font-size: 50px;
+  text-shadow: -4px 6px black;
+}
+
+.game-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* win start */
+
+.win-logo {
+  width: 50%;
+  border-right: 2px solid #d2fa0c;
+}
+
+.win-one-none {
+  display: none;
+}
+
+.win-wrap-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-logo img {
+  width: 70%;
+}
+
+.win-text {
+  width: 50%;
+  margin-top: -70px;
+}
+
+.win-number-one {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: rgb(250, 92, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.win-number-one h4 {
+  color: #fff;
+  font-size: 70px;
+  padding: 20px;
+}
+
+.win-text h1 {
+  color: rgb(250, 92, 0);
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.win-two-none {
+  display: none;
+}
+
+.win-wrap-two {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-logo img {
+  width: 70%;
+}
+
+.win-number-two {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: rgb(250, 92, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.win-number-two h4 {
+  color: #fff;
+  font-size: 70px;
+  padding: 20px;
+}
+
+/* win end  */
+
+.left-logo {
+  width: 50%;
+  border-right: 2px solid #d2fa0c;
+}
+
+.left-logo img {
+  width: 70%;
+}
+
+.player-one {
+  width: 50%;
+  margin-top: -70px;
+}
+
+.number-one {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: rgb(250, 92, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-one h1 {
+  color: #fff;
+  font-size: 70px;
+  padding: 20px;
+}
+
+.number-two {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  margin: 0 auto;
+  background-color: rgb(250, 92, 0);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-two h1 {
+  color: #fff;
+  font-size: 70px;
+  padding: 20px;
+}
+
+.player-one h4 {
+  color: rgb(250, 92, 0);
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.player-one input {
+  background-color: #fff;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.player-one button {
+  font-size: 32px;
+  padding: 10px;
+}
+
+.player-two {
+  display: none;
+  width: 50%;
+  margin-top: -70px;
+}
+
+.player-two h4 {
+  color: rgb(250, 92, 0);
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.player-two input {
+  background-color: #fff;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.player-two button {
+  font-size: 32px;
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.error-two {
+  color: red;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 0;
+}
+
+.limit-bar {
+  width: 50%;
+  height: 10%;
+  margin: 0 auto;
+  display: none;
+  transition: all linear 0.3s;
+}
+.limit-back {
+  width: 100%;
+  height: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+}
+.limit-front {
+  height: 15px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(250, 92, 0);
+  transition: all linear 0.3s;
+}
+
+.one {
+  width: 20%;
+}
+
+.two {
+  width: 40%;
+}
+
+.three {
+  width: 60%;
+}
+
+.four {
+  width: 80%;
+}
+
+.five {
+  width: 100%;
+}
